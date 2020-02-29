@@ -12,7 +12,7 @@ class Comments extends Component {
     return (
       <div className="Comments">
         <h1>Any comments you want to leave?</h1>
-        <h5><i>Comments:?</i></h5>
+        <h5><i>Comments:</i></h5>
          {/* adding an input section */}
         <input placeholder="Leave Comments Here"/>
         {/* button will run the buttonClick function and take us to the next component */}
