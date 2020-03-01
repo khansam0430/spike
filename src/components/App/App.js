@@ -11,13 +11,6 @@ import Review from '../Review/Review';
 import Submit from '../Submit/Submit';
 
 class App extends Component {
-  // no get required...just do a post on the review page--send everything to redux store instead
-
-  // componentDidMount = ()=> {
-  //   console.log('in component did mount');
-  
-  // }
-
   render() {
     return (
      

@@ -16,7 +16,7 @@ class Submit extends Component {
         <h1>Your feedback has been submitted!</h1>
         <h2>Thank You</h2>
         
-        {/* button will run the buttonClick function and take us back to the first component */}
+        {/* button will run the buttonClick function and take us back to the first component added material UI*/}
         <Button variant="contained" color="primary" className="nextButton" onClick={this.buttonClick}>Leave New Feedback</Button>
         <br/>
         <br/>

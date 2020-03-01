@@ -36,6 +36,7 @@ class Comments extends Component {
                 <h1>Would you like to leave Comments?</h1>
                 <h5><i>Comment:</i></h5>
                  {/* text area for comments */}
+                 {/* added a button for back click and calling it here. Added materail UI  */}
                  <Button variant="contained" color="secondary" className="backButton" onClick={this.backClick}>Previous</Button>
                  <textarea rows="5" cols="50" id="comments" onChange={this.handleChangeFor} placeholder="write comments here"/>
                  {/* button will run the buttonClick function and take us to the next component */}

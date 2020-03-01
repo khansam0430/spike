@@ -41,6 +41,7 @@ class Review extends Component {
           <p>Understanding: {this.props.reduxState.understanding}</p>
           <p>Support: {this.props.reduxState.supported}</p>
           <p>Comments: {this.props.reduxState.comments}</p>
+          {/* added a button for back click and calling it here. Added materail UI  */}
           <Button variant="contained" color="secondary" className="backButton" onClick={this.backClick}>Previous</Button>
         <span id="span"></span>
          {/* button will run the buttonClick function and take us back to the first component */}
