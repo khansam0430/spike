@@ -8,55 +8,57 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 
-const feeling = (state = [], action) => {
-  // TODO - set feedback with data from server
-    if(action.type === 'SET_FEELING'){
-        return [action.payload]
-    }
-    return state
-}
 
-const understanding = (state = [], action) => {
-  // TODO - set feedback with data from server
-    if(action.type === 'SET_UNDERSTANDING'){
-        return [...state,action.payload]
+const feeling = (state = '', action) => {
+  if(action.type === 'SET_FEELING'){
+      return state = action.payload;
+  }
+  if (action.type === "NEW_FEEDBACK") {
+    state = '';
+    return state;
+  }
+  return state
+  }
+  
+  const understanding = (state = '', action) => {
+    if (action.type === 'SET_UNDERSTANDING') {
+      return state = action.payload;
     }
-    return state
-}
-
-const supported = (state = [], action) => {
-  // TODO - set feedback with data from server
-    if(action.type === 'SET_SUPPORTED'){
-        return [...state,action.payload]
+    if (action.type === "NEW_FEEDBACK") {
+      state = '';
+      return state;
     }
-    return state
-}
-
-const comments = (state = [], action) => {
-  // TODO - set feedback with data from server
-    if(action.type === 'SET_COMMENTS'){
-        return [...state,action.payload]
+    return state;
+  };
+  
+  const supported = (state = '', action) => {
+    if (action.type === 'SET_SUPPORTED') {
+      return state = action.payload;
     }
-    return state
-}
-
-const review = (state = [], action) => {
-  // TODO - set feedback with data from server
-    if(action.type === 'SET_REVIEW'){
-        state= '';
-        return action.payload
+    if (action.type === "NEW_FEEDBACK") {
+      state = '';
+      return state;
     }
-    return state
-}
-
+    return state;
+  };
+  
+  const comments = (state = '', action) => {
+    if (action.type === 'SET_COMMENTS') {
+      return state = action.payload;
+    }
+    if (action.type === "NEW_FEEDBACK") {
+      state = '';
+      return state;
+    }
+    return state;
+  };
 
 const reduxStore = createStore(
   combineReducers({
     feeling,
     understanding,
     supported,
-    comments,
-    review
+    comments
   }),
   applyMiddleware(logger)
 );

@@ -19,11 +19,11 @@ class Review extends Component {
         }).then((response)=>{
           console.log('response from POST', response);
           this.props.dispatch({
-            type: 'SET_REVIEW'
+            type: 'NEW_FEEDBACK'
           }) //disptaching to set_review which will allow the reducers to clear out for the next feedback.
           this.props.history.push('/submit'); //takes us to the submit page
         }).catch((error)=> {
-          console.log('error', error);
+          console.log('ERROR submitting Feedback', error);
         })
 
     }

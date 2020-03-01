@@ -12,7 +12,8 @@ class Submit extends Component {
   render() {  
     return (
       <div className="Submit">
-        <h1>Thank You!</h1>
+        <h1>Your feedback has been submitted!</h1>
+        <h2>Thank You</h2>
         
         {/* button will run the buttonClick function and take us back to the first component */}
         <button className="nextButton" onClick={this.buttonClick}>Leave New Feedback</button>
