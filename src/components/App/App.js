@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
+
 //importing all of the components
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
@@ -11,6 +11,12 @@ import Review from '../Review/Review';
 import Submit from '../Submit/Submit';
 
 class App extends Component {
+  // no get required...just do a post on the review page--send everything to redux store instead
+
+  // componentDidMount = ()=> {
+  //   console.log('in component did mount');
+  
+  // }
 
   render() {
     return (

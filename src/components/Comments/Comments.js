@@ -1,28 +1,45 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import { connect } from 'react-redux';
 
 class Comments extends Component {
-    //adding function to link this components next button to the next component
-    buttonClick = () =>{
-        console.log('Button Click in Comments');
-        this.props.history.push('/review');
-      }
 
-  render() {  
-    return (
-      <div className="Comments">
-        <h1>Any comments you want to leave?</h1>
-        <h5><i>Comments:</i></h5>
-         {/* adding an input section */}
-        <input placeholder="Leave Comments Here"/>
-        {/* button will run the buttonClick function and take us to the next component */}
-        <button className="nextButton" onClick={this.buttonClick}>Next</button>
-        <br/>
-        <br/>
-      </div>
-     
-    );
+  state={
+      comments:''
   }
-}
+ 
+    handleChangeFor = (event, typeofChange) => {
+        this.setState({
+            comments: event.target.value
+            },
+        );
+    }
 
-export default Comments;
+    //adding function to link this components next button to the next component
+    //dispatch answer to redux store
+    buttonClick = () =>{
+        this.props.dispatch({
+            type:'SET_COMMENTS',
+            payload:this.state.comments
+        })
+        this.props.history.push('/review')
+
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Would you like to leave Comments?</h1>
+                <h5><i>Comment:</i></h5>
+                 {/* text area for comments */}
+                 <input onChange={this.handleChangeFor} placeholder="write comments here"/>
+                 {/* button will run the buttonClick function and take us to the next component */}
+                <button className="nextButton" onClick={this.buttonClick}>Next</button>
+              </div>
+        )
+    }
+}
+const putReduxStateOnProps = (reduxState) => ({
+    reduxState
+})
+
+export default connect(putReduxStateOnProps)(Comments);

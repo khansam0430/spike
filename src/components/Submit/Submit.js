@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import {connect} from 'react-redux';
+
 
 class Submit extends Component {
     //adding function to link this components next button to the home component
@@ -23,4 +24,4 @@ class Submit extends Component {
   }
 }
 
-export default Submit;
+export default connect()(Submit);
