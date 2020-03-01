@@ -18,5 +18,9 @@
 }
 
 .nextButton{
-  margin-left: 15pt;
+  margin-left: 20pt;
+}
+
+.backButton{
+  margin-right:20pt;
 }

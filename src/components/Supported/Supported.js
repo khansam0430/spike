@@ -26,6 +26,10 @@ state={
         this.props.history.push('/comments')
 
     }
+ //including a back button which takes user back to previous page
+    backClick = () =>{
+      this.props.history.push('/understanding')
+    }
 
     render() {
         return (
@@ -33,6 +37,7 @@ state={
                 <h1>Do you feel supported?</h1>
                 <h5><i>Supported?</i></h5>
                  {/* adding a drop down */}
+                <button className="backButton" onClick={this.backClick}>Previous</button>
                 <select id="supported" name="supported" onChange={this.handleChangeFor}>
                     <option value="0"></option>
                     <option value="1">1 - I feel alone</option>
@@ -43,6 +48,7 @@ state={
                 </select>
                  {/* button will run the buttonClick function and take us to the next component */}
                 <button className="nextButton" onClick={this.buttonClick}>Next</button>
+                
               </div>
         )
     }

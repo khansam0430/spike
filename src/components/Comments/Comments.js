@@ -24,6 +24,10 @@ class Comments extends Component {
         this.props.history.push('/review')
 
     }
+ //including a back button which takes user back to previous page
+    backClick = () =>{
+      this.props.history.push('/supported')
+    }
 
     render() {
         return (
@@ -31,6 +35,7 @@ class Comments extends Component {
                 <h1>Would you like to leave Comments?</h1>
                 <h5><i>Comment:</i></h5>
                  {/* text area for comments */}
+                 <button className="backButton" onClick={this.backClick}>Previous</button>
                  <input onChange={this.handleChangeFor} placeholder="write comments here"/>
                  {/* button will run the buttonClick function and take us to the next component */}
                 <button className="nextButton" onClick={this.buttonClick}>Next</button>

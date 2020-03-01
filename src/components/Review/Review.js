@@ -27,6 +27,10 @@ class Review extends Component {
         })
 
     }
+ //including a back button which takes user back to previous page
+    backClick = () =>{
+      this.props.history.push('/comments')
+    }
 
     render() {  
       return (
@@ -36,6 +40,7 @@ class Review extends Component {
           <p>Understanding: {this.props.reduxState.understanding}</p>
           <p>Support: {this.props.reduxState.supported}</p>
           <p>Comments: {this.props.reduxState.comments}</p>
+          <button className="backButton" onClick={this.backClick}>Previous</button>
         
          {/* button will run the buttonClick function and take us back to the first component */}
           <button className="nextButton" onClick={this.buttonClick}>Submit</button>

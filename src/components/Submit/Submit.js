@@ -6,7 +6,7 @@ class Submit extends Component {
     //adding function to link this components next button to the home component
     buttonClick = () =>{
         console.log('Button Click in Submit');
-        this.props.history.push('/'); //takes us back to the homepage
+        this.props.history.push('/'); //takes user back to the homepage
       }
 
   render() {  
