@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 
 class Submit extends Component {
@@ -16,7 +17,7 @@ class Submit extends Component {
         <h2>Thank You</h2>
         
         {/* button will run the buttonClick function and take us back to the first component */}
-        <button className="nextButton" onClick={this.buttonClick}>Leave New Feedback</button>
+        <Button variant="contained" color="primary" className="nextButton" onClick={this.buttonClick}>Leave New Feedback</Button>
         <br/>
         <br/>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class Supported extends Component {
 
@@ -37,7 +38,7 @@ state={
                 <h1>Do you feel supported?</h1>
                 <h5><i>Supported?</i></h5>
                  {/* adding a drop down */}
-                <button className="backButton" onClick={this.backClick}>Previous</button>
+                 <Button variant="contained" color="secondary" className="backButton" onClick={this.backClick}>Previous</Button>
                 <select id="supported" name="supported" onChange={this.handleChangeFor}>
                     <option value="0"></option>
                     <option value="1">1 - I feel alone</option>
@@ -47,7 +48,7 @@ state={
                     <option value="5">5 - Supported</option>
                 </select>
                  {/* button will run the buttonClick function and take us to the next component */}
-                <button className="nextButton" onClick={this.buttonClick}>Next</button>
+                 <Button variant="contained" color="primary" className="nextButton" onClick={this.buttonClick}>Next</Button>
                 
               </div>
         )

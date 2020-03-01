@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 class Review extends Component {
@@ -40,10 +41,10 @@ class Review extends Component {
           <p>Understanding: {this.props.reduxState.understanding}</p>
           <p>Support: {this.props.reduxState.supported}</p>
           <p>Comments: {this.props.reduxState.comments}</p>
-          <button className="backButton" onClick={this.backClick}>Previous</button>
-        
+          <Button variant="contained" color="secondary" className="backButton" onClick={this.backClick}>Previous</Button>
+        <span id="span"></span>
          {/* button will run the buttonClick function and take us back to the first component */}
-          <button className="nextButton" onClick={this.buttonClick}>Submit</button>
+         <Button variant="contained" color="primary" className="nextButton" onClick={this.buttonClick}>Submit</Button>
           <br/>
           <br/>
          </div>

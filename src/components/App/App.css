@@ -24,3 +24,43 @@
 .backButton{
   margin-right:20pt;
 }
+
+#feeling{
+  margin-left: 20pt;
+  margin-right: 20pt;
+  height: 30px;
+  font-size: 15pt;
+}
+
+#understanding{
+  margin-left: 20pt;
+  margin-right: 20pt;
+  height: 30px;
+  font-size: 15pt;
+}
+
+#supported{
+  margin-left: 20pt;
+  margin-right: 20pt;
+  height: 30px;
+  font-size: 15pt;
+}
+
+#comments{
+  margin-left: 20pt;
+  margin-right: 20pt;
+  height: 30px;
+  font-size: 15pt;
+}
+
+#review{
+  margin-left: 20pt;
+  margin-right: 20pt;
+  height: 30px;
+  font-size: 15pt;
+}
+
+#span{
+  margin-left: 20pt;
+  margin-right: 20pt;
+}

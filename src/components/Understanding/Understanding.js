@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class Understanding extends Component {
 
@@ -34,20 +35,20 @@ state={
     render() {
         return (
             <div>
-                <h1>How are you understanding today?</h1>
-                <h5><i>understanding?</i></h5>
+                <h1>How well did you understand today's material?</h1>
+                <h5><i>Understanding?</i></h5>
                  {/* adding a drop down */}
-                 <button className="backButton" onClick={this.backClick}>Previous</button>
+                 <Button variant="contained" color="secondary" className="backButton" onClick={this.backClick}>Previous</Button>
                 <select id="understanding" name="understanding" onChange={this.handleChangeFor}>
                     <option value="0"></option>
                     <option value="1">1 - I feel lost</option>
                     <option value="2">2  </option>
                     <option value="3">3  </option>
                     <option value="4">4 </option>
-                    <option value="5">5 - I feel Fantastic</option>
+                    <option value="5">5 - I'm a Pro</option>
                 </select>
                  {/* button will run the buttonClick function and take us to the next component */}
-                <button className="nextButton" onClick={this.buttonClick}>Next</button>
+                 <Button variant="contained" color="primary" className="nextButton" onClick={this.buttonClick}>Next</Button>
               </div>
         )
     }
