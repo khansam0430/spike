@@ -2,6 +2,33 @@
   text-align: center;
 }
 
+.apps{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+
+.bodys{
+  background-color: teal;
+  padding-top: 50px;
+  padding-bottom: 500px;
+}
+
+.header{
+  background-color: black;
+  min-height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.button{
+  background-color: aliceblue;
+  min-height: 20px;
+  padding: 10px;
+  font-size: larger;
+}
+
 .App-header {
   background-color: #033076;
   min-height: 70px;
@@ -9,20 +36,25 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.fade-appear,
+.fade-enter{
+  opacity: 0;
+  z-index: 1;
 }
 
-.App-intro {
-  font-size: large;
+.fade-appear-active,
+.fade-enter.fade-enter-active{
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
 }
 
-.nextButton{
-  margin-left: 20pt;
+.fade-exit{
+  opacity: 1;
 }
 
-.backButton{
-  margin-right:20pt;
+.fade-exit.fade-exit-active{
+  opacity: 0;
+  transition: opacity 150ms linear;
 }
 
 #feeling{
@@ -37,30 +69,4 @@
   margin-right: 20pt;
   height: 30px;
   font-size: 15pt;
-}
-
-#supported{
-  margin-left: 20pt;
-  margin-right: 20pt;
-  height: 30px;
-  font-size: 15pt;
-}
-
-#comments{
-  margin-left: 20pt;
-  margin-right: 20pt;
-  height: 30px;
-  font-size: 15pt;
-}
-
-#review{
-  margin-left: 20pt;
-  margin-right: 20pt;
-  height: 30px;
-  font-size: 15pt;
-}
-
-#span{
-  margin-left: 20pt;
-  margin-right: 20pt;
 }
